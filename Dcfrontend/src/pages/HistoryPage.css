@@ -1,0 +1,1226 @@
+/* =========================================================
+   DOCUMIND AI - HISTORY PAGE
+   Professional Light Theme
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.history-page {
+  width: 100%;
+  height: 100vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 24px 30px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fafc 0%,
+      #f5f7fb 45%,
+      #f8fafc 100%
+    );
+
+  color: #172033;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   CUSTOM SCROLLBAR
+========================================================= */
+
+.history-page::-webkit-scrollbar {
+  width: 7px;
+}
+
+.history-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.history-page::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+.history-page::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.history-bg-glow {
+  position: fixed;
+
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  pointer-events: none;
+
+  opacity: 0.08;
+
+  z-index: 0;
+}
+
+.history-bg-one {
+  top: -150px;
+  left: -130px;
+
+  background: #6366f1;
+}
+
+.history-bg-two {
+  right: -150px;
+  bottom: -150px;
+
+  background: #10b981;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.history-header {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  position: relative;
+  z-index: 5;
+
+  animation:
+    historyHeaderIn 0.45s ease;
+}
+
+
+/* =========================================================
+   HEADER LEFT
+========================================================= */
+
+.history-header-left {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.history-back-button {
+  height: 38px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+
+  border: 1px solid #dbe1ea;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: #475569;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.03);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.history-back-button:hover {
+  color: #4f46e5;
+
+  background: #ffffff;
+
+  border-color: #c7d2fe;
+
+  transform: translateX(-2px);
+
+  box-shadow:
+    0 5px 14px rgba(79, 70, 229, 0.08);
+}
+
+.history-back-button svg {
+  transition:
+    transform 0.2s ease;
+}
+
+.history-back-button:hover svg {
+  transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.history-heading {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.history-title-icon {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #4f46e5;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #e8eaff
+    );
+
+  border: 1px solid #dfe4ff;
+
+  box-shadow:
+    0 5px 16px
+    rgba(79, 70, 229, 0.08);
+}
+
+
+.history-eyebrow {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #6366f1;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.1px;
+}
+
+
+.history-heading h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 23px;
+
+  line-height: 1.2;
+
+  font-weight: 750;
+
+  letter-spacing: -0.45px;
+}
+
+
+.history-heading p {
+  margin: 5px 0 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  font-weight: 450;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.history-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+
+.history-refresh,
+.history-clear {
+  height: 37px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 10.5px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+
+/* Refresh */
+
+.history-refresh {
+  color: #334155;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe1ea;
+
+  box-shadow:
+    0 2px 7px rgba(15, 23, 42, 0.025);
+}
+
+.history-refresh:hover:not(:disabled) {
+  color: #4f46e5;
+
+  border-color: #c7d2fe;
+
+  background: #fafbff;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 14px
+    rgba(79, 70, 229, 0.08);
+}
+
+
+/* Clear */
+
+.history-clear {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    );
+
+  border: 1px solid #dc2626;
+
+  box-shadow:
+    0 4px 12px
+    rgba(220, 38, 38, 0.12);
+}
+
+.history-clear:hover:not(:disabled) {
+  background:
+    linear-gradient(
+      135deg,
+      #dc2626,
+      #b91c1c
+    );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px
+    rgba(220, 38, 38, 0.18);
+}
+
+
+.history-refresh:disabled,
+.history-clear:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.history-error {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 15px;
+
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #b91c1c;
+
+  background: #fff7f7;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  position: relative;
+  z-index: 3;
+}
+
+
+/* =========================================================
+   HISTORY LIST
+========================================================= */
+
+.history-list-container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HISTORY CARD
+========================================================= */
+
+.history-card {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  background:
+    rgba(255, 255, 255, 0.98);
+
+  border: 1px solid #e2e7ee;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 3px 12px
+    rgba(15, 23, 42, 0.035);
+
+  animation:
+    historyCardIn 0.45s ease both;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d5dced;
+
+  box-shadow:
+    0 10px 28px
+    rgba(15, 23, 42, 0.065);
+}
+
+
+/* =========================================================
+   DATE / TIME
+========================================================= */
+
+.history-date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  padding-bottom: 10px;
+
+  border-bottom:
+    1px solid #edf0f4;
+}
+
+
+.history-date {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #334155;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.history-date svg {
+  color: #6366f1;
+}
+
+
+.history-time {
+  color: #64748b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DOCUMENT HEADER
+========================================================= */
+
+.history-card-header {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+
+.history-document {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.history-file-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #4f46e5;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eef2ff,
+      #f0f2ff
+    );
+
+  border: 1px solid #e0e7ff;
+}
+
+
+.history-document span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #94a3b8;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+
+.history-document h3 {
+  max-width: 700px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #1e293b;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.history-delete {
+  width: 33px;
+  height: 33px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #fee2e2;
+
+  border-radius: 8px;
+
+  color: #dc2626;
+
+  background: #fff7f7;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+}
+
+.history-delete:hover:not(:disabled) {
+  color: #b91c1c;
+
+  background: #ffe4e6;
+
+  border-color: #fecaca;
+
+  transform: scale(1.04);
+}
+
+.history-delete:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MESSAGE AREA
+========================================================= */
+
+.history-message {
+  margin-top: 15px;
+}
+
+
+.history-message-label {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 7px;
+}
+
+
+.history-message-label strong {
+  color: #1e293b;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.05px;
+}
+
+
+/* =========================================================
+   YOUR ICON
+========================================================= */
+
+.history-user-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  color: #4f46e5;
+
+  background: #eef2ff;
+
+  border: 1px solid #dfe4ff;
+}
+
+
+/* =========================================================
+   YOUR QUESTION
+========================================================= */
+
+.history-question {
+  padding: 13px 15px;
+
+  color: #1e293b;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f6f7ff,
+      #f8f9ff
+    );
+
+  border: 1px solid #e1e5ff;
+
+  border-left:
+    4px solid #6366f1;
+
+  border-radius: 9px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.75;
+
+  letter-spacing: 0.05px;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   AI ICON
+========================================================= */
+
+.history-ai-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  color: #059669;
+
+  background: #ecfdf5;
+
+  border: 1px solid #d1fae5;
+}
+
+
+/* =========================================================
+   AI BADGE
+========================================================= */
+
+.history-ai-badge {
+  padding: 3px 7px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 3px;
+
+  border-radius: 999px;
+
+  color: #047857;
+
+  background: #ecfdf5;
+
+  border: 1px solid #ccefe0;
+
+  font-size: 8px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   AI ANSWER
+========================================================= */
+
+.history-answer {
+  padding: 13px 15px;
+
+  color: #243447;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4fbf8,
+      #f7fcfa
+    );
+
+  border: 1px solid #dcefe7;
+
+  border-left:
+    4px solid #10b981;
+
+  border-radius: 9px;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.05px;
+
+  white-space: pre-wrap;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.history-empty {
+  width: 100%;
+  max-width: 480px;
+
+  margin: 70px auto;
+
+  padding: 48px 25px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e7ee;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 28px
+    rgba(15, 23, 42, 0.05);
+
+  position: relative;
+
+  z-index: 2;
+
+  animation:
+    historyCardIn 0.45s ease;
+}
+
+
+.history-empty-icon {
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  color: #4f46e5;
+
+  background: #eef2ff;
+
+  border: 1px solid #dfe4ff;
+}
+
+
+.history-empty h2 {
+  margin: 16px 0 6px;
+
+  color: #172033;
+
+  font-size: 19px;
+
+  font-weight: 750;
+}
+
+
+.history-empty p {
+  max-width: 350px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.history-loading {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.history-loading-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  color: #4f46e5;
+
+  background: #eef2ff;
+
+  border: 1px solid #dfe4ff;
+
+  animation:
+    historyFloat 2s ease-in-out infinite;
+}
+
+
+.history-loading h2 {
+  margin: 14px 0 4px;
+
+  color: #172033;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+.history-loading p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+
+.history-loading-bar {
+  width: 135px;
+  height: 3px;
+
+  margin-top: 14px;
+
+  overflow: hidden;
+
+  border-radius: 99px;
+
+  background: #e2e8f0;
+}
+
+
+.history-loading-bar span {
+  display: block;
+
+  width: 45%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #6366f1;
+
+  animation:
+    historyLoading 1.2s infinite;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes historyHeaderIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes historyCardIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes historyFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-5px);
+  }
+}
+
+
+@keyframes historyLoading {
+
+  0% {
+    transform:
+      translateX(-120%);
+  }
+
+  100% {
+    transform:
+      translateX(330%);
+  }
+}
+
+
+.history-spin {
+  animation:
+    historyRotate 0.8s linear infinite;
+}
+
+
+@keyframes historyRotate {
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .history-page {
+    padding: 20px;
+  }
+
+  .history-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .history-header-left {
+    width: 100%;
+  }
+
+  .history-actions {
+    width: 100%;
+  }
+
+  .history-refresh,
+  .history-clear {
+    flex: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .history-page {
+    padding: 13px;
+  }
+
+  .history-header-left {
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .history-heading {
+    gap: 9px;
+  }
+
+  .history-title-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .history-heading h1 {
+    font-size: 19px;
+  }
+
+  .history-heading p {
+    font-size: 10px;
+  }
+
+  .history-back-button {
+    width: 36px;
+
+    padding: 0;
+  }
+
+  .history-back-button span {
+    display: none;
+  }
+
+  .history-card {
+    padding: 14px;
+  }
+
+  .history-document h3 {
+    max-width: 190px;
+
+    font-size: 12px;
+  }
+
+  .history-question,
+  .history-answer {
+    padding: 11px 12px;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .history-date {
+    font-size: 10px;
+  }
+
+  .history-time {
+    font-size: 9px;
+  }
+
+}
